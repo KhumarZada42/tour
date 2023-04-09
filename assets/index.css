@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul, ol, a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+  }
+  
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+
+
+
+
+
+  nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    box-shadow: rgb(182, 182, 182) 0px 1px 10px;
+  }
+  nav .nav_container {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  nav .nav_container .logo_bar {
+    display: flex;
+    align-items: center;
+  }
+  nav .nav_container .logo_bar .azerbaijan {
+    padding-left: 30px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+  }
+  nav .nav_container .menu {
+    display: flex;
+  }
+  nav .nav_container .first_menu {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+  }
+  nav ul a:hover {
+    text-decoration: underline;
+  }
+  nav ul .inner {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px 20px;
+  }
+  nav ul #about-a:hover .inner {
+    display: block;
+  }
+  nav ul #about-a:hover i {
+    transform: rotate(180deg);
+  }
+  nav ul li {
+    font-weight: 400;
+    font-style: normal;
+  }
+  nav ul li i {
+    transition: transform 0.2s ease-in-out;
+  }
+  nav .hamburger_menu {
+    display: none;
+  }
+  
+
+
+
+  
+  @media screen and (max-width: 767px) {
+    nav {
+      align-items: center;
+    }
+    nav .hamburger_menu {
+      padding: 10px;
+      display: block;
+      align-items: center;
+    }
+    nav .nav_container {
+      align-items: center;
+    }
+    nav .nav_container .menu_container .menu .first_menu {
+      display: none;
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 250px;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: flex-start;
+  }
+  footer .footerContainer {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+  }
+  footer .footerContainer .up {
+    padding-left: 50px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+  }
+  footer .footerContainer .up .socialICON {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  footer .footerContainer .footerLink {
+    display: flex;
+  }
+  footer .footerContainer .footerLink ul {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    text-decoration: underline;
+  }
+  footer .footerContainer .footerLink ul li {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+
+  .welcome {
+    background-image: url("../assets/img/sec1bghome.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+  }
+  .welcome .home_container {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome .home_container h1 {
+    font-size: 96px;
+  }
+  .welcome .home_container p {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .welcome .home_container .btn_head {
+    color: #286928;
+    height: 55px;
+    width: 150px;
+    font-size: 16px;
+    border-color: transparent;
+    margin: 40px;
+  }
+  .welcome .home_container .btn_head:hover {
+    background-color: rgb(222, 222, 222);
+  }
+
+
+
+  .wellknown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wellknown span {
+    font-weight: bold;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #286928;
+  }
+  .wellknown .wellknown_card {
+    display: flex;
+    flex-direction: row;
+    min-width: 70%;
+    justify-content: space-around;
+    gap: 15px;
+    
+  }
+  .wellknown .wellknown_card  img{
+    height: 300px;
+    width: 300px;
+
+  }
+  .wellknown .wellknown_card .wellknown_cards_text {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #286928;
+  }
+  .wellknown .wellknown_card .wellknown_cards_text h3 {
+    font-size: 24px;
+  }
+  .wellknown .wellknown_card .wellknown_cards_text p {
+    font-size: 18px;
+    padding: 15px;
+  }
+  .wellknown .more_btn {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wellknown .more_btn button {
+    padding: 15px 40px;
+    border: 2px #286928 solid;
+    background-color: transparent;
+    color: #286928;
+    font-size: 16px;
+  }
+  .wellknown .more_btn button:hover {
+    background-color: #286928;
+    color: white;
+  }
+
+
+
+
+  .find {
+    background-image: url("../assets/img/find.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    margin-bottom: 100px;
+  }
+  .find .findItems {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .find .findItems h2 {
+    font-size: 96px;
+  }
+  .find .findItems p {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .find .findItems .btn_sec3 {
+    color:  #286928;
+    height: 55px;
+    width: 150px;
+    font-size: 16px;
+    border-color: transparent;
+    margin: 40px;
+  }
+  .find .findItems .btn_sec3:hover {
+    background-color: rgb(222, 222, 222);
+  }
+
+
+  .learnMore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .learnMore .learnMoreCard {
+    display: flex;
+    flex-direction: row;
+    min-width: 70%;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .learnMore .learnMoreCard img{
+    height: 350px;
+    width: 550px;
+  }
+  .learnMore .learnMoreCard .learnMoreCardText {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#286928;
+    margin-top: 20px;
+  }
+  .learnMore .learnMoreCard .learnMoreCardText h3 {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  .learnMore .learnMoreCard .learnMoreCardText p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .learnMore .learnMoreBTN {
+    padding: 15px 40px;
+    border: 2px#286928 solid;
+    background-color: transparent;
+    color:#286928;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .learnMore .learnMoreBTN:hover {
+    background-color:#286928;
+    color: white;
+  }
+
+
+  .signUp {
+    background-image: url("../assets/img/baku.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    margin-top: 100px;
+  }
+  .signUp .signUpContainer {
+    color: white;
+    text-align: center;
+  }
+  .signUp .signUpContainer .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signUp .signUpContainer h2 {
+    font-size: 90px;
+    font-weight: normal;
+    padding: 40px;
+  }
+  .signUp .signUpContainer .email {
+    width: 380px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border-color: transparent;
+    opacity: 0.7;
+  }
+  .signUp .signUpContainer .submit {
+    color: #286928;
+    height: 55px;
+    width: 150px;
+    font-size: 16px;
+    border-color: transparent;
+    margin: 15px;
+  }
+  .signUp .signUpContainer .submit:hover {
+    background-color: rgb(222, 222, 222);
+  }
+
+  .followUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .followUs span {
+    font-weight: bold;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #286928;
+  }
+  .followUs .followUsCard {
+    display: flex;
+    flex-direction: row;
+    min-width: 70%;
+    justify-content: space-around;
+    gap: 15px;
+  }
+  .followUs .followUsCard img{
+    height: 350px;
+    width: 450px;
+  }
+  .followUs a {
+    display: flex;
+    padding: 50px;
+    margin-bottom: 50px;
+    color: #286928;
+    font-size: 24px;
+    text-decoration: underline;
+  }
