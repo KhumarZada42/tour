@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="stylesheet" href="./assets/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
 
@@ -33,19 +36,25 @@
             <div class="menu_container">
                 <ul class="menu">
                     <div class="first_menu">
-
+                        <a href="./index.html">
+                            <li>Home</li>
+                        </a>
                         <div id="about-a">
                             <a href="./about.html">
-                                <li>About <i class="fa-solid fa-caret-down"></i></li>
+                                <li>About Azerbaijan <i class="fa-solid fa-caret-down"></i></li>
                             </a>
                             <a href="./destinations.html" class="inner">Destinations</a>
                         </div>
-
+                        <a href="./cuisine.html">
+                            <li>Cuisine</li>
+                        </a>
                         <a href="./contact.html">
                             <li>Contact</li>
                         </a>
+                        <a href="https://www.instagram.com/">
+                            <li>Follow us</li>
+                        </a>
                     </div>
-
 
                 </ul>
             </div>
@@ -74,15 +83,21 @@
 
         <div class="wellknown_card">
             <div class="card_1">
-                <img src="./assets/img/maidantower.jpg" alt="">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/maidantower.jpg" alt="This zooms-in really well and smooth">
+                </div>
                 <div class="wellknown_cards_text">
                     <h3>The Maiden Tower</h3>
                     <p>One of the first historical...</p>
                 </div>
             </div>
 
+
+
             <div class="card_2">
-                <img src="./assets/img/shirvanshahs.jpg" alt="">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/shirvanshahs.jpg" alt="This zooms-in really well and smooth">
+                </div>
                 <div class="wellknown_cards_text">
                     <h3>Shirvanshah Palace</h3>
                     <p>The Shirvanshah Palace is...</p>
@@ -90,7 +105,9 @@
             </div>
 
             <div class="card_3">
-                <img src="./assets/img/gobustan.jpg" alt="">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/gobustan.jpg" alt="This zooms-in really well and smooth">
+                </div>
                 <div class="wellknown_cards_text">
                     <h3>Gobustan</h3>
                     <p>Gobustan is in Garadagh...</p>
@@ -98,27 +115,28 @@
             </div>
 
             <div class="card_4">
-                <img src="./assets/img/AzkyhCave.jpg" alt="">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/AzkyhCave.jpg" alt="This zooms-in really well and smooth">
+                </div>
                 <div class="wellknown_cards_text">
                     <h3>Azkyh Cave</h3>
                     <p>It is the oldest cave...</p>
                 </div>
             </div>
         </div>
-        <div class="more_btn"><a href="./about.html"><button>Learn more</button></a></div>
+        <div class="more_btn"><a href="./destinations.html"><button>Learn more</button></a></div>
 
     </section>
     <!-- SECTION 2 END -->
 
 
     <!-- SECTION 3 START -->
-
     <section class="find">
         <div class="findItems">
             <div>
                 <h2>Best places to visit</h2>
                 <p>Find your new favorite places!</p>
-                <a href="./about.html"> <button class="btn_sec3">
+                <a href="./destinations.html"> <button class="btn_sec3">
                         Learn more
                     </button></a>
             </div>
@@ -129,19 +147,29 @@
     <section class="learnMore">
         <div class="learnMoreCard">
             <div class="card1">
-                <img src="./assets/img/learnmore.jpg" alt="">
+                <div class="container2">
+                    <img src="./assets/img/learnmore.jpg" alt="Avatar" class="image2">
+                    <div class="overlay2">OLD CITY ICHARI SHAHAR</div>
+                </div>
                 <div class="learnMoreCardText">
                     <h3>About Azerbaijan</h3>
-                    <p>Azerbaijan officially the Republic of Azerbaijan</p>
+                    <p>Azerbaijan officially the Republic of Azerbaijan...</p>
                     <a href="./about.html"><button class="learnMoreBTN">Learn more</button></a>
                 </div>
             </div>
 
+
+
+
             <div class="card2">
-                <img src="./assets/img/shekikhan.jpg" alt="">
+
+                <div class="container2">
+                    <img src="./assets/img/shekikhan.jpg" alt="">
+                    <div class="overlay2">SHEKI KHAN PALACE</div>
+                </div>
                 <div class="learnMoreCardText">
                     <h3>Destinations</h3>
-                    <p>The Flame Towers, Icheri Sheher, Baku Boulevard, etc.</p>
+                    <p>The most outstanding and valuable monument...</p>
                     <a href="./destinations.html"><button class="learnMoreBTN">Learn more</button></a>
                 </div>
             </div>
@@ -152,6 +180,58 @@
 
 
     <!-- SECTION 5 START -->
+    <section class="findcuisine">
+        <div class="findcuisineItems">
+            <div>
+                <h2>Find more about national cuisine</h2>
+                <p>Find your new favorite dishes!</p>
+                <a href="./cuisine.html"> <button class="btn_sec3">
+                        Learn more
+                    </button></a>
+            </div>
+    </section>
+    <!-- SECTION 5 END -->
+
+
+    <!-- SECTION 6 START -->
+    <section class="cuisinemenu">
+        <div class="refineSort">
+            <span>The Most Popular</span>
+        </div>
+        <div class="cuisinemenucartcontainer">
+            <div class="firstROW">
+                <div class="cuisinemenuCard">
+                    <div class="card_1">
+                        <div class="cardZoom"><img src="./assets/img/plov.png" alt=""></div>
+                        <div class="cuisineCardsText">
+                            <h3>Plov</h3>
+                            <p>Traditional Rice and Meat</p>
+                        </div>
+                    </div>
+
+                    <div class="card_3">
+                        <div class="cardZoom"><img src="./assets/img/kebap.png" alt=""></div>
+                        <div class="cuisineCardsText">
+                            <h3>Kebab</h3>
+                            <p>Azerbaijani Kebab</p>
+                        </div>
+                    </div>
+
+                    <div class="card_3">
+                        <div class="cardZoom"><img src="./assets/img/baklava.png" alt=""></div>
+                        <div class="cuisineCardsText">
+                            <h3>Pakhlava</h3>
+                            <p>Azerbaijani Baklava</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!-- SECTION 6 END -->
+
+
+    <!-- SECTION 7 START -->
     <section class="signUp">
         <div class="signUpContainer">
             <div class="row">
@@ -160,53 +240,109 @@
                 <button class="submit">Submit</button>
             </div>
     </section>
-    <!-- SECTION 5 END -->
+    <!-- SECTION 7 END -->
 
-    <!-- SECTION 6 START -->
+    <!-- SECTION 8 START -->
     <section class="followUs">
 
         <div class="followUsContainer"><span>Follow us on Instagram</span></div>
 
         <div class="followUsCard">
-            <div class="c1">
-                <img src="./assets/img/flw1.png" alt="">
+
+            <div class="container">
+                <img src="./assets/img/flw1.png" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p class="hearticon"><i class="fa-solid fa-heart"></i></p>
+                    </div>
+                </div>
             </div>
 
-            <div class="c2">
-                <img src="./assets/img/flw2.jpg" alt="">
+            <div class="container">
+                <img src="./assets/img/flw2.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p class="hearticon"><i class="fa-solid fa-heart"></i></p>
+                    </div>
+                </div>
             </div>
-
-            <div class="c3">
-                <img src="./assets/img/flw3.jpg" alt="">
+            <div class="container">
+                <img src="./assets/img/flw3.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p class="hearticon"><i class="fa-solid fa-heart"></i></p>
+                    </div>
+                </div>
             </div>
 
 
         </div>
-        <div class="instagramLink"><a href="https://www.instagram.com/">@tour_to_azerbaijan</a></div>
+        <div class="instagramLink">
+            <div class="instaicon">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="https://www.instagram.com/">@tour_to_azerbaijan</a>
+        </div>
 
     </section>
-    <!-- SECTION 6 END -->
+    <!-- SECTION 8 END -->
 
     <!-- FOOTER START -->
     <footer>
         <div class="footerContainer">
 
             <div class="up">
-                <div class="foot_logo"><img class="mina" src="./assets/img/logo.png" alt=""></div>
+                <a href="https://www.instagram.com/">
+                    <div class="foot_logo"><img class="mina" src="./assets/img/logo.png" alt=""></div>
+                </a>
             </div>
-            <div class="footerLink">
-                <ul>
+            <div class="info">
+                <div class="footexample">
+                    <div class="footermap">
+                        <h3>Headquarters</h3>
+                        <p>Azerbaijan Tourism
+                            Uzeyir Hajibeyli street,
+                            <br>
+                            134 Baku,AZ1010,
+                            Azerbaijan
+                        </p>
 
-                    <a href="./contact.html">
-                        <li>Contact Us</li>
-                    </a>
-                </ul>
+                    </div>
+                    <div class="footercollab">
+                        <h3>Collaborations</h3>
+                        <p>Reach out to collaborate at
+                            <br>
+                            <a href="">collab@tourismcan.com</a>
+                            +994 12 4948356
+                        </p>
+                    </div>
+                </div>
+                <div class="footerLink">
+                    <ul>
+                        <a href="./index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="./about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="./destinations.html">
+                            <li>Destinations</li>
+                        </a>
+                        <a href="./cuisine.html">
+                            <li>Cuisine</li>
+                        </a>
+                        <a href="./contact.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
             </div>
 
         </div>
 
     </footer>
     <!-- FOOTER END -->
+
 </body>
 
 </html>
