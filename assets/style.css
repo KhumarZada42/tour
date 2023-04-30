@@ -43,7 +43,6 @@ nav {
 }
 
 nav .nav_container {
-  padding: 50px;
   display: flex;
   align-items: center;
   max-width: 1200px;
@@ -58,7 +57,7 @@ nav .nav_container .logo_bar {
 
 nav .nav_container .logo_bar .azerbaijan {
   padding-left: 30px;
-  width: 130px;
+  width: 125px;
   display: flex;
   align-items: center;
 }
@@ -68,7 +67,7 @@ nav .nav_container .menu {
 }
 
 nav .nav_container .menu .inner {
-  box-shadow: rgb(182, 182, 182) 0px 1px 10px;
+  box-shadow: rgb(182, 182, 182) 0px 1px 10px
 }
 
 nav .nav_container .first_menu {
@@ -773,25 +772,26 @@ footer .footerContainer .info {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }
 .cuisinemenu .refineSort {
   color: #286928;
-  font-size: 40px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
   padding: 100px;
-  gap: 10px;
 }
 .cuisinemenu .cuisinemenuCard {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 30px;
-  padding: 20px;
-  
+  width: 500px;
+  gap: 70px;
+  padding: 30px;
+  color: #286928;
+  text-align: center;
 }
 .cuisinemenu .cuisinemenuCard .card_1, .cuisinemenu .cuisinemenuCard .card_2, .cuisinemenu .cuisinemenuCard .card_3 {
   cursor: pointer;
@@ -817,18 +817,19 @@ footer .footerContainer .info {
   
 }
 .cuisinemenu .cuisinemenuCard .cuisineCardsText {
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .cuisinemenu .cuisinemenuCard .cuisineCardsText h3 {
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
 }
 .cuisinemenu .cuisinemenuCard .cuisineCardsText p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: light;
 }
 

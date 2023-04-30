@@ -50,11 +50,89 @@
                             <li>Cuisine</li>
                         </a>
                         <a href="./contact.html">
-                            <li>Contact</li>
+                            <li>Contact Us</li>
                         </a>
-                        <a href="https://www.instagram.com/">
-                            <li>Follow us</li>
-                        </a>
+
+                        <style>
+                            .dropbtn {
+                                background-color: #286928;
+                                color: white;
+                                padding: 13px;
+                                font-size: 15px;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 5px
+                            }
+
+                            .dropbtn:hover,
+                            .dropbtn:focus {
+                                background-color: #114111;
+                            }
+
+                            .dropdown {
+                                position: relative;
+                                display: inline-block;
+                            }
+
+                            .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: rgb(255, 255, 255);
+                                min-width: 160px;
+                                overflow: auto;
+                                box-shadow: rgb(182, 182, 182) 0px 1px 10px;
+                                z-index: 1;
+                                border-radius: 5px;
+                            }
+
+                            .dropdown-content a {
+                                color: #286928;
+                                padding: 13px 20px;
+                                text-decoration: none;
+                                display: block;
+                                font-size: 15px;
+                            }
+
+                            .dropdown a:hover {
+                                background-color: #ddd;
+                            }
+
+                            .show {
+                                display: block;
+                            }
+                        </style>
+
+                        <div class="dropdown">
+                            <button onclick="dropIt()" class="dropbtn">Follow Us</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            /* When the user clicks on the button, 
+                            toggle between hiding and showing the dropdown content */
+                            function dropIt() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown if the user clicks outside of it
+                            window.onclick = function (event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
                     </div>
 
                 </ul>
@@ -63,12 +141,694 @@
     </nav>
     <!-- NAVBAR END -->
 
+
+
+    <!-- SECTION 1 START -->
+    <section class="aboutazefull">
+        <section class="welcome_aze"></section>
+
+        <!-- style css START -->
+        <style>
+            .welcome_aze {
+                background-image: url("./img/BakuConventionCenter.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-size: cover;
+            }
+        </style>
+
+        <style>
+            .aboutazefull {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial;
+                font-size: 17px;
+            }
+
+            #myVideo {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .content {
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+            }
+
+            #myBtn {
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #000;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            #myBtn:hover {
+                background: #ddd;
+                color: black;
+            }
+        </style>
+        <!-- style css START -->
+
+        <!-- video info start -->
+        <video autoplay muted loop id="myVideo">
+            <source src="./assets/img/naturalbeauty.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <!-- video info end -->
+
+        <!-- content start -->
+        <div class="content">
+            <h1>Visit Best Places in Azerbaijan</h1>
+            <br>
+            <p>Located in Asia, Azerbaijan is bordered by the Caspian Sea on the east. Swans, flamingos, and pelicans
+                all flock to this region. Much of the north and west are covered by the Caucasus Mountains, where roe
+                deer, brown bears, and lynx thrive.</p>
+            <br>
+            <button id="myBtn" onclick="myFunction()">Pause</button>
+        </div>
+        <!-- content end -->
+
+        <!-- javascript start -->
+        <script>
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("myBtn");
+
+            function myFunction() {
+                if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                }
+            }
+        </script>
+        <!-- javascript end -->
+
+    </section>
+    <!-- SECTION 1 END -->
+
+
+
+    <!-- SECTION 2 START -->
+    <!-- CSS START-->
+    <style>
+        .ShakiKhans {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+
+        }
+
+        .image {
+            display: block;
+            width: 350px;
+            height: 300px;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #286928b8;
+            overflow: hidden;
+            width: 350px;
+            height: 300px;
+            height: 0;
+            transition: .4s;
+        }
+
+        .container:hover .overlay {
+            width: 350px;
+            height: 300px;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+    <!-- CSS END-->
+    <div class="header">
+
+        <style>
+            .header {
+                text-align: center;
+                padding: 40px;
+                margin: 50px;
+                color: #286928;
+                font-size: 30px;
+            }
+        </style>
+        <h1>Popular Cities in Azerbaijan
+        </h1>
+        <p>culture & heritage & nature & adventure</p>
+    </div>
+
+
+    <div class="ShakiKhans">
+
+        <div class="container">
+            <img src="./assets/img/shekikhan.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">ShakiKhans</div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <img src="./assets/img/the-waterfall.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Qabala</div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <img src="./assets/img/maralgol-orman-ve-daglar.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Ganja</div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <img src="./assets/img/mardakan-castle.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Mardakan</div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION 2 END -->
+
+
+    <!-- SECTION 3 START -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create two equal columns that sits next to each other */
+        .column {
+            -ms-flex: 50%;
+            /* IE 10 */
+            flex: 50%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+    </style>
+
+
+    <!-- Header -->
+    <div class="header" id="myHeader">
+        <h1>Gallery to see more about Azerbaijan</h1>
+        <p>Click on the buttons to change the grid view.</p>
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn active" onclick="two()">2</button>
+        <button class="btn" onclick="four()">4</button>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="./assets/img/p1.jpg" style="width:100%">
+            <img src="./assets/img/p2.jpg" style="width:100%">
+            <img src="./assets/img/apartment.jpg" style="width:100%">
+            <img src="./assets/img/tourist.jpg" style="width:100%">
+
+        </div>
+        <div class="column">
+            <img src="./assets/img/p8.jpg" style="width:100%">
+            <img src="./assets/img/shirvan.jpg" style="width:100%">
+            <img src="./assets/img/atesgah.jpg" style="width:100%">
+            <img src="./assets/img/lovebaku.jpg" style="width:100%">
+            <img src="./assets/img/Azerbaijani-Museum-of-History.jpg" style="width:100%">
+            <img src="./assets/img/Baku-Azerbaijan.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="./assets/img/natural.jpg" style="width:100%">
+            <img src="./assets/img/quba-azerbaijan-shutterstock_1103017637-1.jpg" style="width:100%">
+            <img src="./assets/img/Old-Town.jpg" style="width:100%">
+            <img src="./assets/img/tour.jpg" style="width:100%">
+            <img src="./assets/img/p3.jpg" style="width:100%">
+
+
+        </div>
+        <div class="column">
+            <img src="./assets/img/AzkyhCave.jpg" style="width:100%">
+            <img src="./assets/img/Baku-Azerbaijan.jpg" style="width:100%">
+            <img src="./assets/img/book-museum.jpg" style="width:100%">
+            <img src="./assets/img/shirvan.jpg" style="width:100%">
+            <img src="./assets/img/carpetmuseum.jpg" style="width:100%">
+            <img src="./assets/img/cay.jpg" style="width:100%">
+        </div>
+    </div>
+
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+
+        // Declare a loop variable
+        var i;
+
+        // Full-width images
+        function one() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+            }
+        }
+
+        // Two images side by side
+        function two() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "50%";  // IE10
+                elements[i].style.flex = "50%";
+            }
+        }
+
+        // Four images side by side
+        function four() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "25%";  // IE10
+                elements[i].style.flex = "25%";
+            }
+        }
+
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myHeader");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!-- SECTION 3 END -->
+
+
+
+
+    <!-- SECTION 4 START -->
+    <!-- CSS START-->
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #1a581a;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        .row {}
+    </style>
+    <!-- CSS END-->
+
+    <h2 style="text-align: center; padding: 100px; font-size: 60px; color: #286928;">Explore The Best Destinations</h2>
+
+
+    <div class="container" style="width: 100%;">
+        <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="./assets/img/Azerbaijani-Museum-of-History.jpg" style="width:100%; height: 800px; ">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="./assets/img/flw3.jpg" style="width:100%; height: 800px;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="./assets/img/gobustanmain.jpg" style="width:100%; height: 800px;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="./assets/img/carpetmuseum.jpg" style="width:100%; height: 800px;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="./assets/img/atesgah.jpg" style="width:100%; height: 800px;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="./assets/img/AzkyhCave.jpg" style="width:100%; height: 800px;">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row" style="
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: nowrap;
+        padding: 0 4px;">
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/Azerbaijani-Museum-of-History.jpg"
+                    style="width:100%; height: 200px;" onclick="currentSlide(1)" alt="Museum of History">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/flw3.jpg" style="width:100%; height: 200px;"
+                    onclick="currentSlide(2)" alt="Babatabat lake">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/gobustanmain.jpg" style="width:100%; height: 200px;"
+                    onclick="currentSlide(3)" alt="Gobustan">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/carpetmuseum.jpg" style="width:100%; height: 200px;"
+                    onclick="currentSlide(4)" alt="Carpet Museum">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/atesgah.jpg" style="width:100%; height: 200px;"
+                    onclick="currentSlide(5)" alt="Ateshgah">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/AzkyhCave.jpg" style="width:100%; height: 200px;"
+                    onclick="currentSlide(6)" alt="AzkyhCave">
+            </div>
+        </div>
+    </div>
+
+    <!-- JS START-->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+    <!-- JS END-->
+    <!-- SECTION 4 END -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- New Section Start -->
+    <!-- SECTION 2 START -->
+    <section class="wellknown" style=" width: 100%; padding-bottom: 100px ;">
+
+        <div class="wellknown_container"><span style="font-size: 60px;">Our 5 Stars Hotels</span></div>
+
+        <div class="wellknown_card">
+            <div class="card_1">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/hiltonbaku.jpg" alt="This zooms-in really well and smooth">
+                </div>
+                <div class="wellknown_cards_text">
+                    <h3>Hilton Baku</h3>
+                    <div class="stars"
+                        style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card_2">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/5seasons.jpg" alt="This zooms-in really well and smooth">
+                </div>
+                <div class="wellknown_cards_text">
+                    <h3>Four Seasons Hotel</h3>
+                    <div class="stars"
+                        style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_3">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/JW.jpg" alt="This zooms-in really well and smooth">
+                </div>
+                <div class="wellknown_cards_text">
+                    <h3>JW Marriott Absheron</h3>
+                    <div class="stars"
+                        style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_4">
+                <div class="img-hover-zoom">
+                    <img src="./assets/img/fairmnt.jpg" alt="This zooms-in really well and smooth"
+                        style="width: 350px;">
+                </div>
+                <div class="wellknown_cards_text">
+                    <h3>Fairmont Flame Towers</h3>
+                    <div class="stars"
+                        style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- SECTION 2 END -->
+    <!-- New Section end -->
+
+
+
+    <!-- Header -->
+    <div class="header">
+        <h2>Book a Reservation</h2>
+        <span>Choose from a wide range of hotels and enjoy the ultimate comfort!</span>
+    </div>
+    <style>
+        .header {
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 150px;
+            color: #286928;
+            font-size: 30px;
+        }
+    </style>
+
+
+
+
     <!-- FOOTER START -->
     <footer>
         <div class="footerContainer">
 
             <div class="up">
-                <a href="https://www.instagram.com/">
+                <a href="./destinations.html">
                     <div class="foot_logo"><img class="mina" src="./assets/img/logo.png" alt=""></div>
                 </a>
             </div>
@@ -104,18 +864,29 @@
                         <a href="./destinations.html">
                             <li>Destinations</li>
                         </a>
-                        <a href="./cuisine.html">
-                            <li>Cuisine</li>
-                        </a>
                         <a href="./contact.html">
                             <li>Contact</li>
                         </a>
+                        <div style="display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        font-size: 30px;
+                        gap: 20px;">
+
+                            <a href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/">
+                                <i class="fa-brands fa-twitter"></i></a>
+
+                        </div>
                     </ul>
                 </div>
             </div>
 
         </div>
-
     </footer>
     <!-- FOOTER END -->
 </body>

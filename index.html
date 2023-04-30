@@ -49,11 +49,89 @@
                             <li>Cuisine</li>
                         </a>
                         <a href="./contact.html">
-                            <li>Contact</li>
+                            <li>Contact Us</li>
                         </a>
-                        <a href="https://www.instagram.com/">
-                            <li>Follow us</li>
-                        </a>
+
+                        <style>
+                            .dropbtn {
+                                background-color: #286928;
+                                color: white;
+                                padding: 13px;
+                                font-size: 15px;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 5px
+                            }
+
+                            .dropbtn:hover,
+                            .dropbtn:focus {
+                                background-color: #114111;
+                            }
+
+                            .dropdown {
+                                position: relative;
+                                display: inline-block;
+                            }
+
+                            .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: rgb(255, 255, 255);
+                                min-width: 160px;
+                                overflow: auto;
+                                box-shadow: rgb(182, 182, 182) 0px 1px 10px;
+                                z-index: 1;
+                                border-radius: 5px;
+                            }
+
+                            .dropdown-content a {
+                                color: #286928;
+                                padding: 13px 20px;
+                                text-decoration: none;
+                                display: block;
+                                font-size: 15px;
+                            }
+
+                            .dropdown a:hover {
+                                background-color: #ddd;
+                            }
+
+                            .show {
+                                display: block;
+                            }
+                        </style>
+
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Follow Us</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            /* When the user clicks on the button, 
+                            toggle between hiding and showing the dropdown content */
+                            function myFunction() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown if the user clicks outside of it
+                            window.onclick = function (event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
                     </div>
 
                 </ul>
@@ -73,6 +151,7 @@
                         Learn more
                     </button></a>
             </div>
+        </div>
     </section>
     <!-- SECTION 1 END -->
 
@@ -292,7 +371,7 @@
         <div class="footerContainer">
 
             <div class="up">
-                <a href="https://www.instagram.com/">
+                <a href="./destinations.html">
                     <div class="foot_logo"><img class="mina" src="./assets/img/logo.png" alt=""></div>
                 </a>
             </div>
@@ -328,18 +407,29 @@
                         <a href="./destinations.html">
                             <li>Destinations</li>
                         </a>
-                        <a href="./cuisine.html">
-                            <li>Cuisine</li>
-                        </a>
                         <a href="./contact.html">
                             <li>Contact</li>
                         </a>
+                        <div style="display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        font-size: 30px;
+                        gap: 20px;">
+
+                            <a href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/">
+                                <i class="fa-brands fa-twitter"></i></a>
+
+                        </div>
                     </ul>
                 </div>
             </div>
 
         </div>
-
     </footer>
     <!-- FOOTER END -->
 

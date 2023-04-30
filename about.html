@@ -48,11 +48,89 @@
                             <li>Cuisine</li>
                         </a>
                         <a href="./contact.html">
-                            <li>Contact</li>
+                            <li>Contact Us</li>
                         </a>
-                        <a href="https://www.instagram.com/">
-                            <li>Follow us</li>
-                        </a>
+
+                        <style>
+                            .dropbtn {
+                                background-color: #286928;
+                                color: white;
+                                padding: 13px;
+                                font-size: 15px;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 5px
+                            }
+
+                            .dropbtn:hover,
+                            .dropbtn:focus {
+                                background-color: #114111;
+                            }
+
+                            .dropdown {
+                                position: relative;
+                                display: inline-block;
+                            }
+
+                            .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: rgb(255, 255, 255);
+                                min-width: 160px;
+                                overflow: auto;
+                                box-shadow: rgb(182, 182, 182) 0px 1px 10px;
+                                z-index: 1;
+                                border-radius: 5px;
+                            }
+
+                            .dropdown-content a {
+                                color: #286928;
+                                padding: 13px 20px;
+                                text-decoration: none;
+                                display: block;
+                                font-size: 15px;
+                            }
+
+                            .dropdown a:hover {
+                                background-color: #ddd;
+                            }
+
+                            .show {
+                                display: block;
+                            }
+                        </style>
+
+                        <div class="dropdown">
+                            <button onclick="dropIt()" class="dropbtn">Follow Us</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            /* When the user clicks on the button, 
+                            toggle between hiding and showing the dropdown content */
+                            function dropIt() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown if the user clicks outside of it
+                            window.onclick = function (event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
                     </div>
 
                 </ul>
@@ -62,12 +140,572 @@
     <!-- NAVBAR END -->
 
 
+    <!-- SECTION 1 START -->
+    <section class="aboutazefull">
+        <section class="welcome_aze"></section>
+
+        <!-- style css START -->
+        <style>
+            .welcome_aze {
+                background-image: url("./img/BakuConventionCenter.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-size: cover;
+            }
+        </style>
+
+        <style>
+            .aboutazefull {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial;
+                font-size: 17px;
+            }
+
+            #myVideo {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .content {
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+            }
+
+            #myBtn {
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #000;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            #myBtn:hover {
+                background: #ddd;
+                color: black;
+            }
+        </style>
+        <!-- style css START -->
+
+        <!-- video info start -->
+        <video autoplay muted loop id="myVideo">
+            <source src="./assets/img/EXPLORE.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <!-- video info end -->
+
+        <!-- content start -->
+        <div class="content">
+            <h1>Welcome To Azerbaijan</h1>
+            <br>
+            <p>Azerbaijan is located between Russia, Iran, Armenia, Georgia and the Caspian Sea. It's home to a
+                remarkable blend of ancient and modern history with sites like millennia-old fire temples and Baku's
+                modern, sleek architecture. In addition to its impressive history, the culture, food and art scene
+                simply can't be beat.</p>
+            <br>
+            <button id="myBtn" onclick="myFunction()">Pause</button>
+        </div>
+        <!-- content end -->
+
+        <!-- javascript start -->
+        <script>
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("myBtn");
+
+            function myFunction() {
+                if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                }
+            }
+        </script>
+        <!-- javascript end -->
+
+    </section>
+    <!-- SECTION 1 END -->
+
+    <!-- SECTION 2 START -->
+    <section class="wellknown">
+
+
+        <section class="aboutazefirst">
+            <div class="aboutazefirst-inner">
+                <div class="img"></div>
+                <div class="text-content">
+                    <h2>Azerbaijan Nature</h2>
+                    <p>Located in Asia, Azerbaijan is bordered by the Caspian Sea on the east. Swans, flamingos, and
+                        pelicans all flock to this region. Much of the north and west are covered by the Caucasus
+                        Mountains, where roe deer, brown bears, and lynx thrive.</p>
+                    <p>In parts of Azerbaijan, including just outside the capital city of Baku, the land is dotted with
+                        oil and gas reserves. These are areas where oil and gas can be extracted from the earth and used
+                        as fuel. Volcanoes have formed above some of the reserves. But instead of spewing lava, the
+                        volcanoes erupt with a muddy mix of water, sand, gas, and sometimes oil.</p>
+                </div>
+            </div>
+        </section>
+        <section class="aboutazesecond">
+            <div class="aboutazesecond-inner">
+                <div class="img"></div>
+                <div class="text-content">
+                    <h2>PEOPLE & CULTURE</h2>
+                    <p>Azerbaijan is home to around ten million people today. About half of the population lives in
+                        bustling urban areas such as Baku.</p>
+                    <p>Some of the country’s inhabitants continue to create traditional crafts. For instance, a group of
+                        people called the Talysh make handmade carpets just as their ancestors did hundreds of years
+                        ago. And traditional music from a stringed instrument called a kobuz is still popular. Like the
+                        Yanar Dağ fire, these time-honored customs aren’t going away anytime soon.</p>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <style>
+            .wellknown .aboutazefirst {
+                width: 100%;
+                background-color: #f6f7f6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wellknown .aboutazefirst .aboutazefirst-inner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1280px;
+                gap: 50px;
+            }
+
+            .wellknown .aboutazefirst .aboutazefirst-inner .img {
+                background-image: url(./assets/img/flw3.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 600px;
+                margin: 10px;
+            }
+
+            .wellknown .aboutazefirst .aboutazefirst-inner .text-content {
+                width: 1000px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 50px;
+                line-height: 30px;
+                color: #286928;
+            }
+
+            .wellknown .aboutazefirst .aboutazefirst-inner .text-content h2 {
+                font-size: 54px;
+                font-weight: 500;
+            }
+
+            .wellknown .aboutazefirst .aboutazefirst-inner .text-content p {
+                font-size: 18px;
+            }
+
+            .wellknown .aboutazesecond {
+                width: 100%;
+                background-color: #286928;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wellknown .aboutazesecond .aboutazesecond-inner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1280px;
+                gap: 50px;
+            }
+
+            .wellknown .aboutazesecond .aboutazesecond-inner .img {
+                background-image: url(./assets/img/map2.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 500px;
+                margin: 10px;
+            }
+
+            .wellknown .aboutazesecond .aboutazesecond-inner .text-content {
+                width: 1000px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 50px;
+                line-height: 30px;
+                color: #fff;
+            }
+
+            .wellknown .aboutazesecond .aboutazesecond-inner .text-content h2 {
+                font-size: 54px;
+                font-weight: 500;
+            }
+
+            .wellknown .aboutazesecond .aboutazesecond-inner .text-content p {
+                font-size: 18px;
+            }
+        </style>
+
+    </section>
+    <!-- SECTION 2 END -->
+
+
+
+    <!-- SECTION 3 START-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px;
+            margin: 50px;
+            color: #286928;
+            font-size: 30px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            margin: 100px 10px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+
+
+    <!-- Header -->
+    <div class="header">
+        <h1>get inspired by Azerbaijan</h1>
+        <p>culture & heritage & nature & adventure & food & drinks</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="./assets/img/AzkyhCave.jpg" style="width:100%">
+            <img src="./assets/img/baku.jpg" style="width:100%">
+            <img src="./assets/img/BakuConventionCenter.jpg" style="width:100%">
+            <img src="./assets/img/carpet.jpg" style="width:100%">
+            <img src="./assets/img/caspian.jpg" style="width:100%">
+            <img src="./assets/img/contactusmain.jpg" style="width:100%">
+            <img src="./assets/img/flw1.png" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="./assets/img/flw2.jpg" style="width:100%">
+            <img src="./assets/img/flw3.jpg" style="width:100%">
+            <img src="./assets/img/gobustan.jpg" style="width:100%">
+            <img src="./assets/img/learnmore.jpg" style="width:100%">
+            <img src="./assets/img/maidantower.jpg" style="width:100%">
+            <img src="./assets/img/map.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="./assets/img/map2.png" style="width:100%">
+            <img src="./assets/img/sec1bghome.jpg" style="width:100%">
+            <img src="./assets/img/shekikhan.jpg" style="width:100%">
+            <img src="./assets/img/shirvanshahs.jpg" style="width:100%">
+            <img src="./assets/img/azerbaijani-foods.jpg" style="width:100%">
+            <img src="./assets/img/baklava.png" style="width:100%">
+            <img src="./assets/img/cay.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="./assets/img/dushbara.png" style="width:100%">
+            <img src="./assets/img/lavangi.png" style="width:100%">
+            <img src="./assets/img/guymag.png" style="width:100%">
+            <img src="./assets/img/shahplov.png" style="width:100%">
+            <img src="./assets/img/sacichi.png" style="width:100%">
+            <img src="./assets/img/kebap.png" style="width:100%">
+        </div>
+    </div>
+    <!-- SECTION 3 END-->
+
+
+    <!-- SECTION 4 START -->
+    <section class="wellknown">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Interesting Facts About Azerbaijan</h1>
+            <p>If you are planning a trip to Azerbaijan, here are 7 interesting facts About Azerbaijan</p>
+        </div>
+
+        <!-- OK 1-->
+        <section class="aboutazesecond">
+            <div class="aboutazesecond-inner">
+                <div class="img1"></div>
+                <div class="text-content">
+                    <h2>1. The Land of Fire</h2>
+                    <p>Azerbaijan is often coined as The Land of Fire, and it isn’t hard to see why. Many of the oldest
+                        hearths on earth are found in Azerbaijan. They’ve been leftover from the nation’s Zoroastrian
+                        days when they worshipped fire thousands of years ago. In fact, the name Azerbaijan literally
+                        means ‘protector of fire.’ If you plan to visit Baku, be sure to take note of the famous ‘flame
+                        towers.’</p>
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazesecond .aboutazesecond-inner .img1 {
+                background-image: url(./assets/img/the-land-of-fire.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 500px;
+                margin: 10px;
+            }
+        </style>
+
+
+        <!-- OK 2-->
+        <section class="aboutazefirst">
+            <div class="aboutazefirst-inner">
+                <div class="img2"></div>
+                <div class="text-content">
+                    <h2>2. Book Museum</h2>
+                    <p>Baku’s Old City, a historically significant area and World Heritage Site, is home to the world’s
+                        first private Museum of Miniature Books. Not only that, the museum boasts the world’s largest
+                        collection of miniature books with more than 5,500 teeny tiny books on display.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazefirst .aboutazefirst-inner .img2 {
+                background-image: url(./assets/img/book-museum.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 600px;
+                margin: 10px;
+            }
+        </style>
+
+        <!-- OK 3-->
+        <section class="aboutazesecond">
+            <div class="aboutazesecond-inner">
+                <div class="img3"></div>
+                <div class="text-content">
+                    <h2>3. Enfranchise Women</h2>
+                    <p>From 1918 – 1920, Azerbaijan developed quite a lot while introducing their first republic, the
+                        Azerbaijan Democratic Republic. In 1918, they became the first Muslim nation to grant women
+                        universal suffrage and is still considered one of the most gender-equal Muslim nations to date.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazesecond .aboutazesecond-inner .img3 {
+                background-image: url(./assets/img/the-first-muslim.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 500px;
+                margin: 10px;
+            }
+        </style>
+
+
+        <!-- OK 4-->
+        <section class="aboutazefirst">
+            <div class="aboutazefirst-inner">
+                <div class="img4"></div>
+                <div class="text-content">
+                    <h2>4. Famous Centre</h2>
+                    <p>Often considered a symbol of modern Azerbaijan, the Heydar Aliyev Centre is truly a sight to see.
+                        This architectural masterpiece was designed by the late and great Zaha Hadid and won the London
+                        Design Museum’s Design of the Year award in 2014. It’s famous for its unique curves and number
+                        of unique exhibitions and museums inside.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazefirst .aboutazefirst-inner .img4 {
+                background-image: url(./assets/img/aliyev-centre.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 600px;
+                margin: 10px;
+            }
+        </style>
+
+
+        <!-- OK 5-->
+        <section class="aboutazesecond">
+            <div class="aboutazesecond-inner">
+                <div class="img5"></div>
+                <div class="text-content">
+                    <h2>5. Home to Volcanoes</h2>
+                    <p>For a nation roughly the size of Austria, Azerbaijan has a staggering amount of volcanoes; around
+                        350 in fact. And these aren’t just any volcanoes; these are mud volcanoes. This makes Azerbaijan
+                        the most concentrated nation on earth for mud volcanoes. Some of which date back more than 20
+                        million years.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazesecond .aboutazesecond-inner .img5 {
+                background-image: url(./assets/img/volcanoes.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 500px;
+                margin: 10px;
+            }
+        </style>
+
+
+
+        <!-- OK 6-->
+        <section class="aboutazefirst">
+            <div class="aboutazefirst-inner">
+                <div class="img6"></div>
+                <div class="text-content">
+                    <h2>6. National Dish is Plov</h2>
+                    <p>Plov is a savoury dish that comes together with a rice-based pilaf seasoned heavily with broth.
+                        It’s a combination of saffron, lamb, dry chestnuts, apricots, cumin and more. This national dish
+                        of Azerbaijan is unbelievably delicious and is found all over the country. Moreover, be sure to
+                        enjoy it with some bread and tea.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazefirst .aboutazefirst-inner .img6 {
+                background-image: url(./assets/img/their-plov.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 600px;
+                margin: 10px;
+            }
+        </style>
+
+
+        <!-- OK 7-->
+        <section class="aboutazesecond">
+            <div class="aboutazesecond-inner">
+                <div class="img7"></div>
+                <div class="text-content">
+                    <h2>7. There’s Oil</h2>
+                    <p>Azerbaijan has some truly impressive oil reserves. In 1901, the nation’s oilfields supplied more
+                        than half of the world’s oil, and through WW2 Azerbaijan accounted for 75% of the oil produced
+                        in the Soviet Union. Thanks to this, Azerbaijan supplied the Eastern front with the vast
+                        majority of oil needed to power Soviet tanks to victory over the Nazis.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <style>
+            .wellknown .aboutazesecond .aboutazesecond-inner .img7 {
+                background-image: url(./assets/img/theres-oil.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1000px;
+                height: 500px;
+                margin: 10px;
+            }
+        </style>
+
+
+
+    </section>
+    <!-- SECTION 4 END -->
+
+    <!-- Header -->
+    <div class="header">
+        <h2>Book an adventure</h2>
+        <span>Choose from a wide range of places to stay and tours to enjoy for the ultimate Azerbaijan travel
+            experience.</span>
+    </div>
+
     <!-- FOOTER START -->
     <footer>
         <div class="footerContainer">
 
             <div class="up">
-                <a href="https://www.instagram.com/">
+                <a href="./destinations.html">
                     <div class="foot_logo"><img class="mina" src="./assets/img/logo.png" alt=""></div>
                 </a>
             </div>
@@ -103,18 +741,29 @@
                         <a href="./destinations.html">
                             <li>Destinations</li>
                         </a>
-                        <a href="./cuisine.html">
-                            <li>Cuisine</li>
-                        </a>
                         <a href="./contact.html">
                             <li>Contact</li>
                         </a>
+                        <div style="display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        font-size: 30px;
+                        gap: 20px;">
+
+                            <a href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/">
+                                <i class="fa-brands fa-twitter"></i></a>
+
+                        </div>
                     </ul>
                 </div>
             </div>
 
         </div>
-
     </footer>
     <!-- FOOTER END -->
 </body>

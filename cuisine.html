@@ -50,11 +50,89 @@
                             <li>Cuisine</li>
                         </a>
                         <a href="./contact.html">
-                            <li>Contact</li>
+                            <li>Contact Us</li>
                         </a>
-                        <a href="https://www.instagram.com/">
-                            <li>Follow us</li>
-                        </a>
+
+                        <style>
+                            .dropbtn {
+                                background-color: #286928;
+                                color: white;
+                                padding: 13px;
+                                font-size: 15px;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 5px
+                            }
+
+                            .dropbtn:hover,
+                            .dropbtn:focus {
+                                background-color: #114111;
+                            }
+
+                            .dropdown {
+                                position: relative;
+                                display: inline-block;
+                            }
+
+                            .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: rgb(255, 255, 255);
+                                min-width: 160px;
+                                overflow: auto;
+                                box-shadow: rgb(182, 182, 182) 0px 1px 10px;
+                                z-index: 1;
+                                border-radius: 5px;
+                            }
+
+                            .dropdown-content a {
+                                color: #286928;
+                                padding: 13px 20px;
+                                text-decoration: none;
+                                display: block;
+                                font-size: 15px;
+                            }
+
+                            .dropdown a:hover {
+                                background-color: #ddd;
+                            }
+
+                            .show {
+                                display: block;
+                            }
+                        </style>
+
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Follow Us</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            /* When the user clicks on the button, 
+                            toggle between hiding and showing the dropdown content */
+                            function myFunction() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown if the user clicks outside of it
+                            window.onclick = function (event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
                     </div>
 
                 </ul>
@@ -64,17 +142,15 @@
     <!-- NAVBAR END -->
 
 
-
-
     <!-- SECTION 1 START -->
     <section class="cuisine">
         <div class="cuisineContainer">
             <div>
                 <h1>Most Popular and Traditional Dishes to Try</h1>
             </div>
+        </div>
     </section>
     <!-- SECTION 1 END -->
-
 
 
 
@@ -89,81 +165,60 @@
                     <div class="card_1">
                         <div class="cardZoom"><img src="./assets/img/plov.png" alt=""></div>
                         <div class="cuisineCardsText">
-                            <h3>Plov</h3>
-                            <p>Traditional Rice and Meat</p>
+
+
+                            <h2>Plov</h2>
+                            <div class="myDIV" style="font-size: 20px
+                                ;">Traditional Rice and Meat...</div>
+                            <div class="hide">
+                                <p>One of the most well-known dishes in Azerbaijan is plov. It can have different
+                                    names,
+                                    depending on the main ingredients used.
+                                    Essentially, plov is a rice-based dish. It can be accompanied by a wide range of
+                                    delicious foods and combinations.Classic plovs include dried fruit plov, mutton
+                                    plov
+                                    with onion, chilov plov (bean plov with fish), chicken plov, and shirin plov
+                                    (sweet
+                                    plov).</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="card_2">
                         <div class="cardZoom"><img src="./assets/img/shahplov.png" alt=""></div>
                         <div class="cuisineCardsText">
-                            <h3>Shah Plov</h3>
-                            <p>Traditional Rice with Fried Dough</p>
+                            <h2>Shah Plov</h2>
+                            <div class="myDIV" style="font-size: 20px
+                                    ;">Traditional Rice with Fried Dough...</div>
+                            <div class="hide">
+                                <p>‘Khan ashi‘, or shah plov, consists of a hearty rice base, topped with meat and
+                                    finished
+                                    with a crust of fried dough.
+                                    The crust is a distinguishing detail of shah plov. It is made of flaky lavash,
+                                    in which
+                                    the plov is cooked.
+                                    Once you’ve steamed your saffron-infused rice, you can top khan ashi with a wide
+                                    range
+                                    of ingredients.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="card_3">
                         <div class="cardZoom"><img src="./assets/img/dolma.png" alt=""></div>
                         <div class="cuisineCardsText">
-                            <h3>Dolma</h3>
-                            <p>Stuffed Grape Leaves</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="secondROW">
-                <div class="cuisinemenuCard">
-                    <div class="card_1">
-                        <div class="cardZoom"><img src="./assets/img/sacichi.png" alt=""></div>
-                        <div class="cuisineCardsText">
-                            <h3>Sajichi</h3>
-                            <p>Azerbaijanian Barbecue</p>
-                        </div>
-                    </div>
-
-                    <div class="card_2">
-                        <div class="cardZoom"><img src="./assets/img/piti.png" alt=""></div>
-                        <div class="cuisineCardsText">
-                            <h3>Piti</h3>
-                            <p>Lamb and Chickpea Soup</p>
-                        </div>
-                    </div>
-
-                    <div class="card_3">
-                        <div class="cardZoom"><img src="./assets/img/buglama.png" alt=""></div>
-                        <div class="cuisineCardsText">
-                            <h3>Buglama</h3>
-                            <p>Traditional Lamb Stew</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cuisinemenucartcontainer">
-                <div class="firstROW">
-                    <div class="cuisinemenuCard">
-                        <div class="card_1">
-                            <div class="cardZoom"><img src="./assets/img/gutab.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Gutabs</h3>
-                                <p>Stuffed Meat or Vegetable Pies</p>
-                            </div>
-                        </div>
-
-                        <div class="card_2">
-                            <div class="cardZoom"><img src="./assets/img/lavangi.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Lavangi</h3>
-                                <p>Baked Stuffed Meat Dish</p>
-                            </div>
-                        </div>
-
-                        <div class="card_3">
-                            <div class="cardZoom"><img src="./assets/img/kebap.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Kebab</h3>
-                                <p>Azerbaijani Kebab</p>
+                            <h2>Dolma</h2>
+                            <div class="myDIV" style="font-size: 20px
+                                    ;">Stuffed Grape Leaves...</div>
+                            <div class="hide">
+                                <p>The name of this dish originates from the shortened Azerbaijani word ‘dolma’, which
+                                    means
+                                    ‘stuffed’.
+                                    Dolma is a traditional Azerbaijani dish, which is also popular in Eastern Europe and
+                                    in
+                                    Mediterranean cuisine. Essentially, it’s a mixture of meat, onion, rice, peas, and
+                                    spices, wrapped in grape leaves or stuffed in vegetables such as tomatoes, sweet
+                                    peppers, or eggplant.</p>
                             </div>
                         </div>
                     </div>
@@ -171,167 +226,764 @@
 
                 <div class="secondROW">
                     <div class="cuisinemenuCard">
+
                         <div class="card_1">
-                            <div class="cardZoom"><img src="./assets/img/salat.png" alt=""></div>
+                            <div class="cardZoom"><img src="./assets/img/sacichi.png" alt=""></div>
                             <div class="cuisineCardsText">
-                                <h3>Mangal Salaty</h3>
-                                <p>Vegetable Salad</p>
+
+
+                                <h2>Sajichi</h2>
+                                <div class="myDIV" style="font-size: 20px
+                                    ;">Azerbaijanian Barbecue...</div>
+                                <div class="hide">
+                                    <p>Many Azerbaĳani foods, even today, are still prepared with ancient cooking
+                                        methods.
+                                        Traditionally, cooking in copper or clay pots has given Azerbaijani cooking a
+                                        unique
+                                        and distinctive flavor.
+                                        Saj ichi is Azerbaijan’s take on barbecue. Traditionally, lamb is the meat of
+                                        choice, as it’s been eaten in the country for centuries.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="card_2">
-                            <div class="cardZoom"><img src="./assets/img/dushbara.png" alt=""></div>
+                            <div class="cardZoom"><img src="./assets/img/piti.png" alt=""></div>
                             <div class="cuisineCardsText">
-                                <h3>Dushbara</h3>
-                                <p>Dumplings</p>
+                                <h2>Piti</h2>
+                                <div class="myDIV" style="font-size: 20px
+                                        ;">Lamb and Chickpea Soup...</div>
+                                <div class="hide">
+                                    <p>Piti is a liquid sauce made of lamb and chickpeas. It’s made with a slow and
+                                        unique
+                                        cooking method, and it has been prepared for generations.
+                                        The soup has an unusual, distinctive taste. Lamb, chickpeas, and baked chestnuts
+                                        are
+                                        the main and irreplaceable ingredients of piti. You can also add vegetables,
+                                        plum, or
+                                        quince for taste.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="card_3">
-                            <div class="cardZoom"><img src="./assets/img/bozbash.png" alt=""></div>
+                            <div class="cardZoom"><img src="./assets/img/buglama.png" alt=""></div>
                             <div class="cuisineCardsText">
-                                <h3>Bozbash</h3>
-                                <p>National Soup of Azerbaijan</p>
+                                <h2>Buglama</h2>
+                                <div class="myDIV" style="font-size: 20px
+                                        ;">Traditional Lamb Stew...</div>
+                                <div class="hide">
+                                    <p>Buglama in Azeri means ‘steamed’, referring to the lamb cooking in its own juices
+                                        over a low flame, for approximately two hours.
+                                        This hearty dish consists of lamb pieces, stewed with onions, tomatoes, peppers,
+                                        black pepper, and bay leaves, in a small amount of liquid.</p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-            </div>
+                <div class="cuisinemenucartcontainer">
+                    <div class="firstROW">
+                        <div class="cuisinemenuCard">
 
-            <div class="cuisinemenucartcontainer">
-                <div class="firstROW">
-                    <div class="cuisinemenuCard">
-                        <div class="card_1">
 
-                            <div class="cardZoom"><img src="./assets/img/pomidor.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Pomidor-Yumurta</h3>
-                                <p>Eggs and Tomatoes</p>
+                            <div class="card_1">
+                                <div class="cardZoom"><img src="./assets/img/gutab.png" alt=""></div>
+                                <div class="cuisineCardsText">
+
+                                    <!-- CSS START -->
+                                    <style>
+                                        .hide {
+                                            display: none;
+                                            box-shadow: #286928ce 0px 1px 10px;
+                                            border-radius: 5px;
+                                            padding: 10px;
+                                            width: 310px;
+                                        }
+
+                                        .myDIV:hover+.hide {
+                                            display: block;
+                                            color: #286928;
+
+                                        }
+                                    </style>
+                                    <!-- CSS END -->
+
+                                    <h2>Gutabs</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                        ;">Stuffed Meat or Vegetable Pies...</div>
+                                    <div class="hide">
+                                        <p>Gutabs are Azerbaijani patty pies. They are stuffed with a variety of greens,
+                                            vegetables, meat, or cheese.
+                                            Gutab is traditionally prepared in the form of a crescent (semi-circle).
+                                            This
+                                            delicious meal is generally made on a large circular metal griddle called
+                                            ‘saj‘.
+                                            Gutabs are served with sumac and yogurt. Azerbaijanians prepare gutabs with
+                                            a
+                                            range of meats, including camel.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card_2">
-                            <div class="cardZoom"><img src="./assets/img/dovga.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Dovga</h3>
-                                <p>Yoghurt Soup
-                                </p>
+                            <div class="card_2">
+                                <div class="cardZoom"><img src="./assets/img/lavangi.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Lavangi</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Baked Stuffed Meat Dish...</div>
+                                    <div class="hide">
+                                        <p>Lavangi is a fish, duck, or chicken dish, stuffed with walnuts, onions, and
+                                            various
+                                            seasonings, which is then baked in the oven.
+                                            Fish-based lavangi use fresh and delicious kutum, asp, or carp from the
+                                            Caspian
+                                            Sea.
+                                            White fish can also be used, and caviar is a popular filling.
+                                            Other stuffings include dried cherry-plums, raisins, sour prunes, or
+                                            “narsharab”,
+                                            and vegetable oil.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card_3">
-                            <div class="cardZoom"><img src="./assets/img/baklava.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Pakhlava</h3>
-                                <p>Azerbaijani Baklava</p>
+                            <div class="card_3">
+                                <div class="cardZoom"><img src="./assets/img/kebap.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Kebab</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Azerbaijani Kebab...</div>
+                                    <div class="hide">
+                                        <p>Azerbaijan has many types of kababs and shashliks. Kebabs are made of
+                                            different
+                                            kinds
+                                            of marinated minced or chopped meat, fish, or chicken.
+                                            Various vegetables are then paired with the succulent chunks of meat, and
+                                            then
+                                            all
+                                            ingredients are threaded onto the skewer. Finally, the kebabs are roasted
+                                            over
+                                            an
+                                            open fire.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="secondROW">
+                        <div class="cuisinemenuCard">
+                            <div class="card_1">
+                                <div class="cardZoom"><img src="./assets/img/salat.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Mangal Salaty</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                        ;">Vegetable Salad...</div>
+                                    <div class="hide">
+                                        <p>Mangal salaty is a fresh, vegetable salad commonly served with kebabs. A wide
+                                            range
+                                            of ingredients go into this refreshing Azerbaijani food.
+                                            These include peppers, tomatoes, eggplant, red onions, herbs, sunflower or
+                                            olive
+                                            oil, and garlic, among others.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_2">
+                                <div class="cardZoom"><img src="./assets/img/dushbara.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Dushbara</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Dumplings...</div>
+                                    <div class="hide">
+                                        <p>Dushbara are tiny, dough dumplings, filled with minced meat and seasonings,
+                                            cooked in
+                                            broth.
+                                            There are similar popular dishes in many countries. Azerbaijanian dushbara
+                                            are
+                                            defined by their small, delicate form.
+                                            Each of the dumplings is carefully molded by hand into small hat-like
+                                            shapes.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_3">
+                                <div class="cardZoom"><img src="./assets/img/bozbash.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Bozbash</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">National Soup of Azerbaijan...</div>
+                                    <div class="hide">
+                                        <p>One of the famous national soups of Azerbaijan is kufta bozbash. It’s a rich,
+                                            hearty
+                                            soup, with plenty of spicy kick.
+                                            To make kufta bozbash, you boil large meatballs in a delicious broth of
+                                            peas,
+                                            potatoes, and mutton bones, until tender.
+                                            Dry or fresh cherries are often added to the meatballs.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="secondROW">
-                    <div class="cuisinemenuCard">
-                        <div class="card_1">
-                            <div class="cardZoom"><img src="./assets/img/bamiye.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Bamiye</h3>
-                                <p>Desserts</p>
+                <div class="cuisinemenucartcontainer">
+                    <div class="firstROW">
+                        <div class="cuisinemenuCard">
+                            <div class="card_1">
+                                <div class="cardZoom"><img src="./assets/img/pomidor.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Pomidor-Yumurta</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Eggs and Tomatoes...</div>
+                                    <div class="hide">
+                                        <p>Many countries have similar dishes with some differences. For example, in
+                                            Turkish
+                                            cuisine, they have menemen, in the Mediterranean cuisine, it is shakshuka,
+                                            and
+                                            in Azerbaijan, it is pomidor chighirtmasy.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card_2">
-                            <div class="cardZoom"><img src="./assets/img/fasali.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Fasali</h3>
-                                <p>Desserts</p>
+                            <div class="card_2">
+                                <div class="cardZoom"><img src="./assets/img/dovga.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Dovga</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Yoghurt Soup...</div>
+                                    <div class="hide">
+                                        <p>Dovga is a traditional Azerbaijanian yogurt soup. It is cooked with a variety
+                                            of
+                                            herbs, such as dill and coriander, rice, and chickpeas.Dovga is considered
+                                            both
+                                            a kind of soup and a drink, and it is commonly eaten or drank with a wide
+                                            range of mains.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card_3">
-                            <div class="cardZoom"><img src="./assets/img/guymag.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Guymag</h3>
-                                <p>Desserts</p>
+                            <div class="card_3">
+                                <div class="cardZoom"><img src="./assets/img/baklava.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Pakhlava</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Azerbaijani Baklava...</div>
+                                    <div class="hide">
+                                        <p>Sheki pakhlavasy is a famous Azerbaijanian sweet. Sheki is a region of
+                                            Azerbaijan, and its inhabitants use the same methods to make this delicious
+                                            treat as they
+                                            have for generations. This type of pakhlava is made from rice flour and
+                                            filled with nuts.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-
-            <div class="cuisinemenucartcontainer">
-                <div class="firstROW">
-                    <div class="cuisinemenuCard">
-                        <div class="card_1">
-
-                            <div class="cardZoom"><img src="./assets/img/nogul.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Nogul</h3>
-                                <p>Desserts</p>
+                    <div class="secondROW">
+                        <div class="cuisinemenuCard">
+                            <div class="card_1">
+                                <div class="cardZoom"><img src="./assets/img/bamiye.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Bamiye</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>Bamiye has a unique and exotic flavor. The choux pastry used to make it is
+                                            put
+                                            through a meat grinder fitted with a special nozzle with a toothed hole in
+                                            the
+                                            center. The result is a ribbed pasta dough, divided into equal portions,
+                                            stretched to a length of 7-8 cm, and fried in vegetable oil.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card_2">
-                            <div class="cardZoom"><img src="./assets/img/kata.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Kata</h3>
-                                <p>Desserts</p>
+                            <div class="card_2">
+                                <div class="cardZoom"><img src="./assets/img/fasali.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Fasali</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>Fresh dough is greased, folded in many layers, cut into rectangles, twisted,
+                                            and
+                                            flattened vertically to produce a thin, circular cake with a diameter of
+                                            10-12
+                                            cm. Both sides of the fasali are cooked in butter in a frying pan and dusted
+                                            with
+                                            powdered sugar before serving.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card_3">
-                            <div class="cardZoom"><img src="./assets/img/gogal.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Gogal</h3>
-                                <p>Desserts</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="secondROW">
-                    <div class="cuisinemenuCard">
-                        <div class="card_1">
-                            <div class="cardZoom"><img src="./assets/img/badambura.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Badambura</h3>
-                                <p>Desserts</p>
-                            </div>
-                        </div>
-
-                        <div class="card_2">
-                            <div class="cardZoom"><img src="./assets/img/shakarbura.png" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Shakarbura</h3>
-                                <p>Desserts</p>
-                            </div>
-                        </div>
-
-                        <div class="card_3">
-                            <div class="cardZoom"><img src="./assets/img/cay.jpg" alt=""></div>
-                            <div class="cuisineCardsText">
-                                <h3>Samovar Tea</h3>
-                                <p>Beverage</p>
+                            <div class="card_3">
+                                <div class="cardZoom"><img src="./assets/img/guymag.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Guymag</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>Rich in flavor, guymag is a traditional dessert. This meal, native to
+                                            Azerbaijan,
+                                            is heavy in calories despite being prepared with only three essential
+                                            ingredients:
+                                            wheat, butter, and water. Cinnamon is often added to enhance the flavor.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
-            </div>
+                <div class="cuisinemenucartcontainer">
+                    <div class="firstROW">
+                        <div class="cuisinemenuCard">
+                            <div class="card_1">
+                                <div class="cardZoom"><img src="./assets/img/nogul.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Nogul</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>This is a traditional desserts that Azerbaijanis have produced for hundreds
+                                            of
+                                            years. It involves soaking cilantro seeds or cardamom in sugar syrup.
+                                            The sugar syrup is heated and then vinegar is added. In a special type of
+                                            pot,
+                                            the cilantro seeds or cardamom “cook” in hot air so they puff up, then they
+                                            are
+                                            covered in icing and flour.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_2">
+                                <div class="cardZoom"><img src="./assets/img/kata.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Kata</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>Kyata is an national Azerbaijani dessert that is found in a variety of shapes
+                                            and
+                                            is known for its delicious flavor. The Baku kyata and Karabakh kyata are the
+                                            two
+                                            most popular forms. The shape of Baku kyata is either triangular or
+                                            rectangular and has jagged
+                                            edges. The Karabakh kyata is quite similar to a broad, flat bun with a
+                                            delicious
+                                            filling inside it. The filling is butter, sugar, and flour.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_3">
+                                <div class="cardZoom"><img src="./assets/img/gogal.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Gogal</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>Traditionally, locals enjoyed these delicious pastries during the Nowruz
+                                            holiday;
+                                            however, nowadays, people seem to eat shorgoghal year-round. A cup of tea
+                                            and a
+                                            shorgogal makes the perfect breakfast for anyone expecting an energetic day.
+                                            One fun fact about shorgogal is that, traditionally, this yellow,
+                                            round-shaped
+                                            pastry represents the sun.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secondROW">
+                        <div class="cuisinemenuCard">
+
+
+                            <div class="card_1">
+                                <div class="cardZoom"><img src="./assets/img/badambura.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Badambura</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                            ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>The dough for badam-bura is flakier than the dough used for sheker-bura, and
+                                            the
+                                            filling always contains chopped almonds combined with sugar, as suggested by
+                                            the
+                                            name.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_2">
+                                <div class="cardZoom"><img src="./assets/img/shakarbura.png" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Shakarbura</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Desserts...</div>
+                                    <div class="hide">
+                                        <p>Shakarbura is a half-moon-shaped pastry filled with lots of nuts, including
+                                            almonds, walnuts, and sugar. Despite being quite a sweet dessert, shakarbura
+                                            does not
+                                            reach the sweetness level of pakhlava.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_3">
+                                <div class="cardZoom"><img src="./assets/img/cay.jpg" alt=""></div>
+                                <div class="cuisineCardsText">
+                                    <h2>Samovar Tea</h2>
+                                    <div class="myDIV" style="font-size: 20px
+                                                ;">Beverage...</div>
+                                    <div class="hide">
+                                        <p>In Azerbaijan, tea is linked to warmth, and the tradition is that no one
+                                            should
+                                            have guests leave the house without having tea together. Along the Silk
+                                            Roads, tea
+                                            was considered a luxury item.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
 
 
     </section>
     <!-- SECTION 2 END -->
 
+    <!-- SECTION 3 START -->
+    <!-- CSS start-->
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+        }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        .row>.column {
+            padding: 0 8px;
+            padding-bottom: 150px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            margin-bottom: -4px;
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+    <!-- CSS end-->
+
+    <h2 style="text-align:center; color: #286928; font-size: 50px; padding-bottom: 100px; padding-top: 0px;">BEST
+        RESTAURANTS</h2>
+
+    <div class="row">
+        <div class="column">
+            <img src="./assets/img/mugamres.jpg" style="width:350px; height: 250px;"
+                onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            <h2 style="display: flex; justify-content: center; padding: 10px; color: #286928;">Mugam Club</h2>
+            <div class="stars"
+                style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+
+        </div>
+        <div class="column">
+            <img src="./assets/img/shirvan.jpg" style="width:350px; height: 250px;"
+                onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            <h2 style="display: flex; justify-content: center; padding: 10px; color: #286928; text-align: center;">
+                Shirvanshah Museum Restaurant</h2>
+            <div class="stars"
+                style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <div class="column">
+            <img src="./assets/img/jazz.jpg" style="width:350px; height: 250px;" onclick="openModal();currentSlide(3)"
+                class="hover-shadow cursor">
+            <h2 style="display: flex; justify-content: center; padding: 10px; color: #286928; text-align: center;">Best
+                Place Baku Restaurant & Jazz Club Restaurant</h2>
+            <div class="stars"
+                style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <div class="column">
+            <img src="./assets/img/partizan.png" style="width:350px; height: 250px;"
+                onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            <h2 style="display: flex; justify-content: center; padding: 10px; color: #286928;">Partizan Restaurant</h2>
+            <div class="stars"
+                style="display: flex; justify-content: center; gap: 15px; color: rgb(255, 196, 0);font-size: 25px">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="./assets/img/mugamres.jpg" style="width:1200px; height: 600px;">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="./assets/img/shirvan.jpg" style="width:1200px; height: 600px;">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="./assets/img/jazz.jpg" style="width:1200px; height: 600px;">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="./assets/img/partizan.png" style="width:1200px; height: 600px;">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/mugamres.jpg" style="width:250px; height: 150px;"
+                    onclick="currentSlide(1)" alt="Mugam Club">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/shirvan.jpg" style="width:250px; height: 150px;"
+                    onclick="currentSlide(2)" alt="Shirvanshah Museum Restaurant">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/jazz.jpg" style="width:250px; height: 150px;"
+                    onclick="currentSlide(3)" alt="Best Place Baku Restaurant & Jazz Club Restaurant">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/img/partizan.png" style="width:250px; height: 150px;"
+                    onclick="currentSlide(4)" alt="Partizan Restaurant">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript START -->
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+    <!-- JavaScript END -->
+
+    <!-- SECTION 3 END-->
+
+
+    <!-- Header -->
+    <div class="header">
+        <h2>Book a Reservation</h2>
+        <span>Choose from a wide range of places and enjoy the ultimate Azerbaijan travel
+            experience.</span>
+    </div>
+    <style>
+        .header {
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 150px;
+            color: #286928;
+            font-size: 30px;
+        }
+    </style>
 
     <!-- FOOTER START -->
     <footer>
         <div class="footerContainer">
 
             <div class="up">
-                <a href="https://www.instagram.com/">
+                <a href="./destinations.html">
                     <div class="foot_logo"><img class="mina" src="./assets/img/logo.png" alt=""></div>
                 </a>
             </div>
@@ -367,18 +1019,29 @@
                         <a href="./destinations.html">
                             <li>Destinations</li>
                         </a>
-                        <a href="./cuisine.html">
-                            <li>Cuisine</li>
-                        </a>
                         <a href="./contact.html">
                             <li>Contact</li>
                         </a>
+                        <div style="display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        font-size: 30px;
+                        gap: 20px;">
+
+                            <a href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/">
+                                <i class="fa-brands fa-twitter"></i></a>
+
+                        </div>
                     </ul>
                 </div>
             </div>
 
         </div>
-
     </footer>
     <!-- FOOTER END -->
 </body>
